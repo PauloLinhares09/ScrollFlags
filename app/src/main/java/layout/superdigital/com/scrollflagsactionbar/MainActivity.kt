@@ -3,10 +3,14 @@ package layout.superdigital.com.scrollflagsactionbar
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 
 import kotlinx.android.synthetic.main.activity_main.*
+import layout.superdigital.com.scrollflagsactionbar.adapter.AdapterTest
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +18,42 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        var layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.setHasFixedSize(true)
+        val list = mutableListOf<String>()
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        list.add("Paulo")
+        list.add("Linhares")
+        recyclerView.adapter = AdapterTest(list)
+
+
 
 //        fab.setOnClickListener { view ->
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
