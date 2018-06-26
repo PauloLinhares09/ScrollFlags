@@ -19,16 +19,48 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             app:toolbarId="@+id/toolbar">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ronaldo"
+                android:orientation="vertical"
                 app:layout_collapseMode="parallax"
-                android:scaleType="centerCrop"
-                android:background="@color/colorAccent"/>
+                android:background="@drawable/ronaldo">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/fab_margin">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Real Madrid"
+                            android:padding="@dimen/fab_margin"
+                            android:background="@color/colorAccent"
+                            android:layout_margin="5dp"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Internazionale"
+                            android:padding="@dimen/fab_margin"
+                            android:layout_margin="5dp"
+                            android:background="@color/colorAccent"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
